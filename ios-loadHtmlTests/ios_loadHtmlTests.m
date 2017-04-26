@@ -2,8 +2,8 @@
 //  ios_loadHtmlTests.m
 //  ios-loadHtmlTests
 //
-//  Created by 邢现庆 on 15-4-22.
-//  Copyright (c) 2015年 邢现庆. All rights reserved.
+//  Created by An An on 15-4-22.
+//  Copyright (c) 2017年 An An. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
