@@ -1,0 +1,280 @@
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
+<script src="AAJQueryLibrary.js">
+</script>
+<script src="AAHighChartsLibrary.js">
+</script>
+<script src="AAHighchartsMore.js">
+</script>
+
+
+<style>
+*{
+-webkit-user-select: none;
+user-select: none;
+}
+</style>
+</head>
+<body>
+<div id="container" style="width:min-450px; height: 500px; margin: 0 auto">
+</div>
+<script language="JavaScript">
+$(document).ready(function() {
+
+
+var json = {
+"series" : [
+{
+"name" : "2017",
+"data" : [
+[
+97,
+36,
+79
+],
+[
+94,
+74,
+60
+],
+[
+68,
+76,
+58
+],
+[
+64,
+87,
+56
+],
+[
+68,
+27,
+73
+],
+[
+74,
+99,
+42
+],
+[
+7,
+93,
+87
+],
+[
+51,
+69,
+40
+],
+[
+38,
+23,
+33
+],
+[
+57,
+86,
+31
+]
+]
+},
+{
+"name" : "2018",
+"data" : [
+[
+25,
+10,
+87
+],
+[
+2,
+75,
+59
+],
+[
+11,
+54,
+8
+],
+[
+86,
+55,
+93
+],
+[
+5,
+3,
+58
+],
+[
+90,
+63,
+44
+],
+[
+91,
+33,
+17
+],
+[
+97,
+3,
+56
+],
+[
+15,
+67,
+48
+],
+[
+54,
+25,
+81
+]
+]
+},
+{
+"name" : "2019",
+"data" : [
+[
+47,
+47,
+21
+],
+[
+20,
+12,
+4
+],
+[
+6,
+76,
+91
+],
+[
+38,
+30,
+60
+],
+[
+57,
+98,
+64
+],
+[
+61,
+17,
+80
+],
+[
+83,
+60,
+13
+],
+[
+67,
+78,
+75
+],
+[
+64,
+12,
+10
+],
+[
+30,
+77,
+82
+]
+]
+}
+],
+"legend" : {
+"align" : "center",
+"enabled" : true,
+"verticalAlign" : "bottom",
+"borderWidth" : 0,
+"layout" : "horizontal"
+},
+"xAxis" : {
+"gridLineWidth" : 0,
+"reversed" : false,
+"labels" : {
+"enabled" : true
+}
+},
+"subtitle" : {
+"style" : {
+"fontSize" : "9px",
+"textOutline" : "1px 1px contrast",
+"fontWeight" : "bold",
+"color" : "#000000"
+},
+"text" : "虚拟数据"
+},
+"colorsTheme" : [
+"#b5282a",
+"#e7a701",
+"#50c18d",
+"#c37779",
+"#f1c6c5"
+],
+"title" : {
+"style" : {
+"fontSize" : "12px",
+"textOutline" : "1px 1px contrast",
+"fontWeight" : "bold",
+"color" : "#000000"
+},
+"text" : "编程语言热度"
+},
+"gradientColorEnable" : false,
+"tooltip" : {
+"crosshairs" : true,
+"shared" : true
+},
+"chart" : {
+"panning" : true,
+"animation" : true,
+"inverted" : false,
+"plotShadow" : false,
+"zoomType" : "x",
+"options3d" : {
+"enabled" : false,
+"alpha" : -15
+},
+"polar" : false,
+"type" : "bubble"
+},
+"yAxis" : {
+"gridLineWidth" : 1,
+"min" : true,
+"title" : {
+"text" : "摄氏度"
+},
+"reversed" : false,
+"lineWidth" : 0,
+"labels" : {
+"enabled" : true
+}
+},
+"plotOptions" : {
+"series" : {
+"marker" : {
+"radius" : 6
+}
+}
+}
+}
+
+
+
+
+$('#container').highcharts(json);
+});
+</script>
+</body>
+ 
