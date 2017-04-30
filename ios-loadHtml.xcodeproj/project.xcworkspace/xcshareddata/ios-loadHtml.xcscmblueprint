@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "29D87D3196747A1762A1757574B153333CF6B932",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B69FBC4B6C58ADF4E2BB9140F094A37C2559328C" : 0,
+    "29D87D3196747A1762A1757574B153333CF6B932" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2A45BC02-8D0B-483C-BDA4-E9575EA4C9A5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B69FBC4B6C58ADF4E2BB9140F094A37C2559328C" : "loadHtmlCssJsDemo",
+    "29D87D3196747A1762A1757574B153333CF6B932" : "loadHtmlCssJsDemo-master\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ios-loadHtml",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios-loadHtml.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AAChartModel\/loadHtmlCssJsDemo-master.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "29D87D3196747A1762A1757574B153333CF6B932"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xingxianqing\/loadHtmlCssJsDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B69FBC4B6C58ADF4E2BB9140F094A37C2559328C"
+    }
+  ]
+}

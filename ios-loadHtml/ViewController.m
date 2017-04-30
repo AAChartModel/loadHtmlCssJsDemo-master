@@ -27,6 +27,7 @@
     NSURL *baseURL = [NSURL fileURLWithPath:path];
     NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"htmlSourceCodeString"
                                                           ofType:@"txt"];
+//  得到本地文件名为htmlSourceCodeString的 txt 文件中的字符串内容htmlCont
     NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
                                                     encoding:NSUTF8StringEncoding
                                                        error:nil];
@@ -34,19 +35,15 @@
  
     
     NSString *urlstring=@"https://www.apple.com/cn/";
-    //抓取网页中 网释义内容
     NSString * encodedString1 = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes( kCFAllocatorDefault, (CFStringRef)urlstring, NULL, NULL,  kCFStringEncodingUTF8 ));
     
     NSURL *url1 = [NSURL URLWithString:encodedString1];
-    NSString *retStr = [NSString stringWithContentsOfURL:url1 encoding:NSUTF8StringEncoding error:nil];//[[NSString alloc] initWithData:data encoding:];
+    //苹果官网中的 html 文本标签🏷内容
+    NSString *retStr = [NSString stringWithContentsOfURL:url1 encoding:NSUTF8StringEncoding error:nil];
     NSLog(@" html = %@",retStr);
     
     NSMutableString *mutableString = (NSMutableString *)retStr;
-    //2.【字符串覆盖】
-//    NSRange range={0,mutableString.length-1};//字符串覆盖另一个字符串（覆盖范围可以设定）
-//   [mutableString  replaceCharactersInRange:range withString:htmlCont];
-    
-//   mutableString= @"<a href=\"http\">这是要截取的内容</a>";
+
     NSRange startRange = [mutableString rangeOfString:@"<!DOCTYPE html>"];
     NSRange endRange = [mutableString rangeOfString:@"</html>"];
     NSRange range = NSMakeRange(startRange.location + startRange.length, endRange.location - startRange.location - startRange.length);
@@ -54,22 +51,13 @@
     
     
     NSString * string=(NSString *)mutableString;
+    
+//将苹果官网首页的文本内容中的<!DOCTYPE html> 和</html>之间的字符串替换成htmlCont(本地文件名为htmlSourceCodeString的 txt 文件中的字符串)
     string=[string stringByReplacingOccurrencesOfString:result withString:htmlCont];
-
     
     [self.webView loadHTMLString:string baseURL:baseURL];
     
-    
-//    NSString *string = @"<a href=\"http\">这是要截取的内容</a>";
-//    NSRange startRange = [string rangeOfString:@"\">"];
-//    NSRange endRange = [string rangeOfString:@"</"];
-//    NSRange range = NSMakeRange(startRange.location + startRange.length, endRange.location - startRange.location - startRange.length);
-//    NSString *result = [string substringWithRange:range];
-//    NSLog(@"%@",result);
-    
-    
-//    NSString * string=@"2011-11-29";
-//    string=[string stringByReplacingOccurrencesOfString:@"-"withString:@"/"];
+ 
     
     
 }
