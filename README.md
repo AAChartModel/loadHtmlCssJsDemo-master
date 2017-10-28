@@ -7,4 +7,4 @@ loadHtmlCssJsDemo
   
   This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)]
   
-  <a href="https://opencollective.com/EFQRCode#contributors"><img src="https://opencollective.com/EFQRCode/contributors.svg?width=890" /></a>
+  <a href="https://opencollective.com/AAChartKit#contributors"><img src="https://opencollective.com/AAChartKit/contributors.svg?width=890" /></a>
