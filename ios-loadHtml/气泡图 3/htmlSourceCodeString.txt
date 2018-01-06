@@ -1,280 +1,43 @@
 
+<html>
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
-<script src="AAJQueryLibrary.js">
-</script>
-<script src="AAHighChartsLibrary.js">
-</script>
-<script src="AAHighchartsMore.js">
-</script>
-
-
-<style>
-*{
--webkit-user-select: none;
-user-select: none;
-}
-</style>
+<title>Highcharts 教程 | 菜鸟教程(runoob.com)</title>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
 <body>
-<div id="container" style="width:min-450px; height: 500px; margin: 0 auto">
-</div>
+<div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
 <script language="JavaScript">
-$(document).ready(function() {
-
-
-var json = {
-"series" : [
-{
-"name" : "2017",
-"data" : [
-[
-97,
-36,
-79
-],
-[
-94,
-74,
-60
-],
-[
-68,
-76,
-58
-],
-[
-64,
-87,
-56
-],
-[
-68,
-27,
-73
-],
-[
-74,
-99,
-42
-],
-[
-7,
-93,
-87
-],
-[
-51,
-69,
-40
-],
-[
-38,
-23,
-33
-],
-[
-57,
-86,
-31
-]
-]
+Highcharts.chart('container', {
+xAxis: {
+categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 },
-{
-"name" : "2018",
-"data" : [
-[
-25,
-10,
-87
-],
-[
-2,
-75,
-59
-],
-[
-11,
-54,
-8
-],
-[
-86,
-55,
-93
-],
-[
-5,
-3,
-58
-],
-[
-90,
-63,
-44
-],
-[
-91,
-33,
-17
-],
-[
-97,
-3,
-56
-],
-[
-15,
-67,
-48
-],
-[
-54,
-25,
-81
-]
-]
+tooltip: {
+enabled: false
 },
-{
-"name" : "2019",
-"data" : [
-[
-47,
-47,
-21
-],
-[
-20,
-12,
-4
-],
-[
-6,
-76,
-91
-],
-[
-38,
-30,
-60
-],
-[
-57,
-98,
-64
-],
-[
-61,
-17,
-80
-],
-[
-83,
-60,
-13
-],
-[
-67,
-78,
-75
-],
-[
-64,
-12,
-10
-],
-[
-30,
-77,
-82
-]
-]
-}
-],
-"legend" : {
-"align" : "center",
-"enabled" : true,
-"verticalAlign" : "bottom",
-"borderWidth" : 0,
-"layout" : "horizontal"
-},
-"xAxis" : {
-"gridLineWidth" : 0,
-"reversed" : false,
-"labels" : {
-"enabled" : true
-}
-},
-"subtitle" : {
-"style" : {
-"fontSize" : "9px",
-"textOutline" : "1px 1px contrast",
-"fontWeight" : "bold",
-"color" : "#000000"
-},
-"text" : "虚拟数据"
-},
-"colorsTheme" : [
-"#b5282a",
-"#e7a701",
-"#50c18d",
-"#c37779",
-"#f1c6c5"
-],
-"title" : {
-"style" : {
-"fontSize" : "12px",
-"textOutline" : "1px 1px contrast",
-"fontWeight" : "bold",
-"color" : "#000000"
-},
-"text" : "编程语言热度"
-},
-"gradientColorEnable" : false,
-"tooltip" : {
-"crosshairs" : true,
-"shared" : true
-},
-"chart" : {
-"panning" : true,
-"animation" : true,
-"inverted" : false,
-"plotShadow" : false,
-"zoomType" : "x",
-"options3d" : {
-"enabled" : false,
-"alpha" : -15
-},
-"polar" : false,
-"type" : "bubble"
-},
-"yAxis" : {
-"gridLineWidth" : 1,
-"min" : true,
-"title" : {
-"text" : "摄氏度"
-},
-"reversed" : false,
-"lineWidth" : 0,
-"labels" : {
-"enabled" : true
-}
-},
-"plotOptions" : {
-"series" : {
-"marker" : {
-"radius" : 6
+plotOptions: {
+series: {
+cursor: 'pointer',
+events: {
+click: function (event) {
+alert(
+this.name + ' 被点击了\n' +
+'最近点：' + event.point.category + '\n' +
+'Alt 键: ' + event.altKey + '\n' +
+'Ctrl 键: ' + event.ctrlKey + '\n' +
+'Meta 键（win 键）： ' + event.metaKey + '\n' +
+'Shift 键：' + event.shiftKey
+);
 }
 }
 }
-}
-
-
-
-
-$('#container').highcharts(json);
+},
+series: [{
+data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+}]
 });
 </script>
 </body>
- 
+</html>
+
